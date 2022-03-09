@@ -1,0 +1,68 @@
+@use '../../index';
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service {
+  background: index.$bg-color-variant;
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid index.$color-primary;
+  height: fit-content;
+  transition: index.$transistion;
+  &:hover {
+    background: transparent;
+    border-color: index.$color-primary-variant;
+    cursor: default;
+  }
+  &__head {
+    background: index.$color-primary;
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+    h3 {
+      color: index.$bg-color;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  &__list {
+    padding: 2rem;
+    li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__list-icon {
+    color: index.$color-primary;
+    margin-top: 4px;
+  }
+}
+
+//MEDIA TABLETS
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .service {
+    height: auto;
+  }
+}
+//MEDIA PHONES
+
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

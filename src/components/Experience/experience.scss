@@ -1,0 +1,69 @@
+@use '../../index';
+
+.experience {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    & > div {
+      background: index.$bg-color-variant;
+      padding: 2.4rem 5rem;
+      border-radius: 2rem;
+      border: 1px solid transparent;
+      transition: index.$transistion;
+      &:hover {
+        background: transparent;
+        border-color: index.$color-primary-variant;
+        cursor: default;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: index.$color-primary;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  &__details {
+    display: flex;
+    gap: 1rem;
+  }
+  &__details-icon {
+    margin-top: 6px;
+    color: index.$color-primary;
+  }
+}
+
+//MEDIA TABLETS
+
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+    & > div {
+      width: 80%;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+  }
+  .experience__content {
+    padding: 1rem;
+  }
+}
+
+//MEDIA PHONES
+
+@media screen and (max-width: 600px) {
+  .experience__container {
+    gap: 1rem;
+    & > div {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+  }
+}
