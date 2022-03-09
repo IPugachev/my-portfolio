@@ -2,7 +2,7 @@ import React from 'react'
 import './contacts.scss'
 
 const Contacts = () => {
-  return <div>Contacts</div>
+  return <section id='contacts'>Contacts</section>
 }
 
 export default Contacts
