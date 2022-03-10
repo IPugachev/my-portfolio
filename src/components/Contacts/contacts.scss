@@ -1,0 +1,79 @@
+@use '../../index';
+
+.contacts__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contacts {
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__option {
+    background: index.$bg-color-variant;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: index.$transistion;
+
+    &:hover {
+      background: transparent;
+      border-color: index.$color-primary-variant;
+    }
+
+    a {
+      margin-top: 0.7rem;
+      display: inline-block;
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      color: index.$color-light;
+    }
+  }
+
+  &__option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 1px solid index.$color-primary-variant;
+  resize: none;
+  color: index.$color-white;
+}
+
+//MEDIA TABLETS
+
+@media screen and (max-width: 1024px) {
+  .contacts__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+//MEDIA PHONES
+
+@media screen and (max-width: 600px) {
+  .contacts__container {
+    width: index.$container-wodth-sm;
+  }
+}

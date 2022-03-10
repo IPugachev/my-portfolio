@@ -1,0 +1,60 @@
+@use '../../index';
+
+.container.testimonials__container {
+  width: 40%;
+  padding-bottom: 4rem;
+  span {
+    background: index.$color-primary;
+  }
+}
+
+.testimonial {
+  background: index.$bg-color-variant;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+}
+
+.client {
+  &__avatar {
+    width: 4rem;
+    // aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 4px solid index.$color-primary-variant;
+
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+
+  &__review {
+    color: index.$color-light;
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+  }
+}
+
+//MEDIA TABLETS
+
+@media screen and (max-width: 1024px) {
+  .container.testimonials__container {
+    width: 60%;
+  }
+}
+
+//MEDIA PHONES
+
+@media screen and (max-width: 600px) {
+  .container.testimonials__container {
+    width: index.$container-wodth-sm;
+  }
+  .client__review {
+    width: index.$container-wodth-sm;
+  }
+}
