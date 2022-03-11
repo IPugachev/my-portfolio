@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-$bg-color: #1f1f38;
-$bg-color-variant: #2c2c6c;
-$color-primary: #4db5ff;
-$color-primary-variant: rgba(77, 181, 255, 0.4);
+// $bg-color: #1f1f38;
+// $bg-color-variant: #2c2c6c;
+// $color-primary: #4db5ff;
+// $color-primary-variant: rgba(77, 181, 255, 0.4);
+// $color-white: #fff;
+// $color-light: rgba(255, 255, 255, 0.6);
+
+$bg-color: #062307;
+$bg-color-variant: #116a14;
+$color-primary: #83ec87;
+$color-primary-variant: #83ec8766;
 $color-white: #fff;
-$color-light: rgba(255, 255, 255, 0.6);
+$color-light: #ffffff99;
+
 $container-wodth-lg: 75%;
 $container-wodth-md: 86%;
 $container-wodth-sm: 90%;
@@ -34,8 +42,7 @@ body {
   background: $bg-color;
   color: $color-white;
   line-height: 1.7;
-  background-color: #1f1f38;
-  background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
+  background-image: url('https://www.transparenttextures.com/patterns/football-no-lines.png');
 }
 
 .container {
