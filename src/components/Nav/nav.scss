@@ -25,8 +25,8 @@ nav {
       background-color: rgba(0, 0, 0, 0.3);
     }
     &.active {
-      background-color: index.$bg-color;
-      color: index.$color-white;
+      background-color: index.$color-primary;
+      color: index.$bg-color;
     }
   }
 }

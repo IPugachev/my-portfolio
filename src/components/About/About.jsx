@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.scss'
-import ME from '../../assets/89eBM2Zpa-M.jpg'
+import ME from '../../assets/about.png'
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { AiOutlineProject } from 'react-icons/ai'

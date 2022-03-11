@@ -21,19 +21,6 @@ $transistion: all 400ms ease;
   text-decoration: none;
 }
 
-// :root {
-//   --color-bg: #{$bg-color};
-//   --color-bg-variant: #2c2c6c;
-//   --color-primary: #4db5ff;
-//   --color-primary-variant: rbga(77, 181, 255, 0.4);
-//   --color-white: #fff;
-//   --color-light: rgba(255, 255, 255, 0.6);
-
-//   --container-wodth-lg: 75%;
-//   --container-wodth-md: 86%;
-//   --container-wodth-sm: 90%;
-// }
-
 html {
   scroll-behavior: smooth;
 }
@@ -47,7 +34,8 @@ body {
   background: $bg-color;
   color: $color-white;
   line-height: 1.7;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-color: #1f1f38;
+  background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
 }
 
 .container {

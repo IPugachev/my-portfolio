@@ -1,11 +1,6 @@
 import React from 'react'
 import './portfolio.scss'
-import IMG1 from '../../assets/sample.jpg'
-import IMG2 from '../../assets/sample.jpg'
-import IMG3 from '../../assets/sample.jpg'
-import IMG4 from '../../assets/sample.jpg'
-import IMG5 from '../../assets/sample.jpg'
-import IMG6 from '../../assets/sample.jpg'
+import { data } from './data'
 
 const Portfolio = () => {
   return (
@@ -14,138 +9,22 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className='container portfolio__container'>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-img'>
-            <img src={IMG1} alt='' />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <div className='portfolio__item-cta'>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button'
-              target='_blank'
-              rel='noreferrer'>
-              Github
-            </a>
-            <a
-              href='https://github.com/IPugachev/study-project-toxin'
-              className='button button-primary'
-              target='_blank'
-              rel='noreferrer'>
-              Live Demo
-            </a>
-          </div>
-        </article>
+        {data.map((item) => (
+          <article className='portfolio__item' key={item.id}>
+            <div className='portfolio__item-img'>
+              <img src={item.img} alt='' />
+            </div>
+            <h3>{item.name}</h3>
+            <div className='portfolio__item-cta'>
+              <a href={item.git} className='button' target='_blank' rel='noreferrer'>
+                Github
+              </a>
+              <a href={item.live} className='button button-primary' target='_blank' rel='noreferrer'>
+                Live Demo
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   )
